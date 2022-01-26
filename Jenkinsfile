@@ -30,7 +30,7 @@ pipeline
 			{
 				echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
 
-				sh 'npm install && cd ui && npm install && npm build'
+				sh "npm install"
 			}
 		}
 
