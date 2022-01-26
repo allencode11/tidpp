@@ -1,6 +1,0 @@
-[submodule "UI"]
-	path = UI
-	url = https://github.com/mr-l0n3lly/ebsui
-[submodule "ui"]
-	path = ui
-	url = https://github.com/mr-l0n3lly/ebsui
