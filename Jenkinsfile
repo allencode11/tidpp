@@ -30,7 +30,6 @@ pipeline
 			{
 				echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
 
-				sh "npm install"
 			}
 		}
 
