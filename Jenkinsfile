@@ -35,19 +35,12 @@ pipeline
 			}
 		}
 
-        stage ('tests') {
-          withEnv(["JEST_JUNIT_OUTPUT=./jest-test-results.xml"]) {
-            sh 'npm test -- --ci --testResultsProcessor="jest-junit"'
-          }
-          junit 'jest-test-results.xml'
-        }
-
 		stage("Test back-end")
 		{
 			steps
 			{
 			    echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
-                sh 'npm i jest && pm run test'
+                sh 'npm run test'
 // 				sh '''. ${BUILD_TAG}/Scripts/activate && deactivate'''
 			}
 		}
