@@ -1,7 +1,11 @@
 #!groovy
 pipeline
 {
-	agent any
+	agent {
+	    docker {
+                image 'node:16.13.1-alpine'
+            }
+	}
 
 	options
 	{
@@ -29,7 +33,7 @@ pipeline
 			steps
 			{
 				echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
-                sh 'echo "npm install" ',
+                sh 'echo "npm install" '
 			}
 		}
 
