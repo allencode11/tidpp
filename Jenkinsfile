@@ -40,7 +40,7 @@ pipeline
 			steps
 			{
 			    echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
-                sh 'npm run test'
+                sh 'npm test -- --ci --testResultsProcessor="jest-junit"'
 // 				sh '''. ${BUILD_TAG}/Scripts/activate && deactivate'''
 			}
 		}
@@ -65,7 +65,7 @@ pipeline
 		always
 		{
 
-// 			junit '**/test-reports/*.xml'
+ 			junit '**/test-reports/*.xml'
 
 			script
 			{
