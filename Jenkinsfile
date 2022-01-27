@@ -63,7 +63,7 @@ pipeline
 		always
 		{
 
-			junit '**/test-reports/*.xml'
+// 			junit '**/test-reports/*.xml'
 
 			script
 			{
