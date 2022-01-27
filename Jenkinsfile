@@ -29,7 +29,7 @@ pipeline
 			steps
 			{
 				echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
-                sh 'echo "npm install" '
+                sh 'npm install'
 			}
 		}
 
@@ -38,7 +38,7 @@ pipeline
 			steps
 			{
 			    echo "Build number ${BUILD_NUMBER} with tag ${BUILD_TAG}"
-                sh 'echo "npm run test" '
+                sh 'npm run test'
 // 				sh '''. ${BUILD_TAG}/Scripts/activate && deactivate'''
 			}
 		}
